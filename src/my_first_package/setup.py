@@ -1,3 +1,5 @@
+import os
+import glob
 from setuptools import find_packages, setup
 
 package_name = 'my_first_package'
@@ -10,7 +12,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-    ],
+        ('share/' + package_name + '/launch', glob.glob(os.path.join('launch', '*.launch.*'))),
+    ], # 모든 launch 파일 형식자에 대해 glob.glob()을 통해 launch 폴더 안에 있는 모든 파일을 가져와서 data_files에 추가
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='kuvve',
