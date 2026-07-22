@@ -1,0 +1,19 @@
+# ROS2 colcon 빌드 산출물 (소스에서 재생성되므로 커밋 불필요)
+build/
+install/
+log/
+
+# rosbag 녹화 데이터
+turtle_test/
+*.db3
+
+# Python 캐시
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 에디터/OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
